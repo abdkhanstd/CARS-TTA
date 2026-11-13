@@ -14,14 +14,14 @@ RES = os.path.join(ROOT, "results")
 CONF = ["srcA_s1", "srcA_s2", "srcB_s0", "srcB_s1"]
 OURS = "CARS-TTA (ours)"
 ABL = [("full", "Full \\cars{}"), None,
-       ("A1_no_counterfactuals", "No shifts (clean episodes only)"), ("A2_intensity_only", "Intensity shifts only"),
+       ("A1_no_counterfactuals", "Clean episodes only"), ("A2_intensity_only", "Intensity shifts only"),
        ("A3_frequency_only", "Frequency shifts only"), None,
-       ("A6_no_uncertainty", "w/o uncertainty features"), ("A8b_no_disagreement", "w/o disagreement features"),
-       ("A5_no_fragmentation", "w/o fragmentation features"), ("A7_no_morphology", "w/o morphology features"),
-       ("A8_no_ood", "w/o OOD features"), ("A14_scan_features_only", "Scan-level information only"), None,
+       ("A6_no_uncertainty", "w/o uncertainty feat."), ("A8b_no_disagreement", "w/o disagreement feat."),
+       ("A5_no_fragmentation", "w/o fragmentation feat."), ("A7_no_morphology", "w/o morphology feat."),
+       ("A8_no_ood", "w/o OOD features"), ("A14_scan_features_only", "Scan-level features only"), None,
        ("A9_no_harm_term", "w/o harm term ($\\lambda_h{=}0$)"), None,
-       ("A11_binary_consensus_gate", "Actions: consensus gate only"), ("A12_steps_only", "Actions: TENT steps only"),
-       ("A12_one_step_only", "Actions: one TENT step only")]
+       ("A11_binary_consensus_gate", "Consensus gate only"), ("A12_steps_only", "TENT steps only"),
+       ("A12_one_step_only", "One TENT step only")]
 rows = []
 for tag in CONF:
     for item in ABL:
@@ -53,7 +53,7 @@ for item in ABL:
     if k == "full":
         out.append(f"{lab} & {g} & {h} & -- \\\\")
         continue
-    j = e.join(full, rsuffix="_f", how="inner")
+    j = e.join(full.add_suffix("_f"), how="inner")
     delta = (j.gain - j.gain_f).groupby(level=[1, 2]).mean() * 100
     bs = [rng.choice(delta.values, len(delta)).mean() for _ in range(5000)]
     lo, hi = np.quantile(bs, [0.025, 0.975])

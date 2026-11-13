@@ -32,7 +32,7 @@ for tag in CONF:
             for m, cc in sel.items():
                 recs.append({"tag": tag, "target": tt, "pid": pid, "method": m, "dice": c.loc[pid, f"dice__{cc}"],
                              "hd95": c.loc[pid, f"hd95__{cc}"], "gain": c.loc[pid, f"dice__{cc}"] - base,
-                             "chg": cc != "src"})
+                             "chg": True})  # a retrained segmenter changes every prediction of the original model
             recs.append({"tag": tag, "target": tt, "pid": pid, "method": "ours", "dice": o.loc[pid, OURS],
                          "hd95": np.nan, "gain": o.loc[pid, OURS] - base, "chg": True})
 d = pd.DataFrame(recs)
