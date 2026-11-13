@@ -1,0 +1,3 @@
+source,model_a,model_b,n,mean_abs_diff,pct_diff_gt1,pct_drop_gt1_either_direction,pct_drop_gt5
+srcA,srcA_s1,srcA_s2,375,2.6830227197931813,64.0,32.0,6.4
+srcB,srcB_s0,srcB_s1,345,4.242882051478763,75.36231884057972,37.68115942028986,13.768115942028986
