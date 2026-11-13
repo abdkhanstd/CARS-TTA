@@ -1,0 +1,30 @@
+{
+ "args": {
+  "ckpt": "checkpoints/srcD_s0/best.pt",
+  "split": "splits/srcD_s0.csv",
+  "cache": [
+   "data/cache/acdc",
+   "data/cache/mnms"
+  ],
+  "role": "router_val",
+  "vendor": null,
+  "dataset": null,
+  "n_shifts": 10,
+  "pool": "all",
+  "sev_max": 1.0,
+  "K": 5,
+  "lr": 0.001,
+  "method": "tent",
+  "orig_metrics": false,
+  "src_stats": null,
+  "save_masks": 0,
+  "seed": 101,
+  "bs": 8,
+  "no_features": true,
+  "shard": "0/3",
+  "out": "results/srcD_s0/lrsel/lr0.001_shard0.csv"
+ },
+ "peak_gpu_mb": 1625.20458984375,
+ "total_seconds": 61.4788122177124,
+ "n_episodes": 33
+}

@@ -1,0 +1,95 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcD_s0/best.pt",
+    "split": "splits/srcD_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.003,
+    "method": "eata",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "0/3",
+    "out": "results/srcD_s0/traj_target_B_eata_shard0.csv"
+   },
+   "peak_gpu_mb": 1703.51220703125,
+   "total_seconds": 491.14228200912476,
+   "n_episodes": 42
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcD_s0/best.pt",
+    "split": "splits/srcD_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.003,
+    "method": "eata",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "1/3",
+    "out": "results/srcD_s0/traj_target_B_eata_shard1.csv"
+   },
+   "peak_gpu_mb": 1624.70458984375,
+   "total_seconds": 479.66267251968384,
+   "n_episodes": 42
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcD_s0/best.pt",
+    "split": "splits/srcD_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.003,
+    "method": "eata",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "2/3",
+    "out": "results/srcD_s0/traj_target_B_eata_shard2.csv"
+   },
+   "peak_gpu_mb": 1624.70458984375,
+   "total_seconds": 505.49149775505066,
+   "n_episodes": 41
+  }
+ ],
+ "peak_gpu_mb": 1703.51220703125
+}

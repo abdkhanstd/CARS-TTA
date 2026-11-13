@@ -1,0 +1,95 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "0/3",
+    "out": "results/srcC_s0/lrsel/lr0.01_shard0.csv"
+   },
+   "peak_gpu_mb": 1623.19482421875,
+   "total_seconds": 17.971004962921143,
+   "n_episodes": 11
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "1/3",
+    "out": "results/srcC_s0/lrsel/lr0.01_shard1.csv"
+   },
+   "peak_gpu_mb": 1624.70458984375,
+   "total_seconds": 18.717756986618042,
+   "n_episodes": 11
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "2/3",
+    "out": "results/srcC_s0/lrsel/lr0.01_shard2.csv"
+   },
+   "peak_gpu_mb": 1624.25537109375,
+   "total_seconds": 20.721206188201904,
+   "n_episodes": 11
+  }
+ ],
+ "peak_gpu_mb": 1624.70458984375
+}

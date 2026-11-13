@@ -1,0 +1,92 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "router_train",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 40,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": "results/srcC_s0/src_stats.npz",
+    "save_masks": 0,
+    "bs": 8,
+    "seed": 1,
+    "shard": "0/3",
+    "out": "results/srcC_s0/cand_router_train_shard0.csv"
+   },
+   "peak_gpu_mb": 1647.39892578125,
+   "total_seconds": 1382.1571109294891,
+   "n_episodes": 123
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "router_train",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 40,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": "results/srcC_s0/src_stats.npz",
+    "save_masks": 0,
+    "bs": 8,
+    "seed": 1,
+    "shard": "1/3",
+    "out": "results/srcC_s0/cand_router_train_shard1.csv"
+   },
+   "peak_gpu_mb": 1647.95947265625,
+   "total_seconds": 1369.8368356227875,
+   "n_episodes": 123
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcC_s0/best.pt",
+    "split": "splits/srcC_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "router_train",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 40,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": "results/srcC_s0/src_stats.npz",
+    "save_masks": 0,
+    "bs": 8,
+    "seed": 1,
+    "shard": "2/3",
+    "out": "results/srcC_s0/cand_router_train_shard2.csv"
+   },
+   "peak_gpu_mb": 1645.94970703125,
+   "total_seconds": 860.5971310138702,
+   "n_episodes": 82
+  }
+ ],
+ "peak_gpu_mb": 1647.95947265625
+}
