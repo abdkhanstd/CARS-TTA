@@ -46,8 +46,8 @@ def save(fig, name):
 def unit_means(df, m):
     """mean gain and harm over (fold, target) units, then averaged (matches pooled_units.csv)."""
     g = gain(df, m)
-    u = pd.DataFrame({"g": g, "h": (g < 0).astype(float), "tag": df.tag, "target": df.target}).groupby(["tag", "target"]).mean()
-    return u.g.mean(), u.h.mean()
+    u = pd.DataFrame({"g": g, "h": (g < -0.01).astype(float), "tag": df.tag, "target": df.target}).groupby(["tag", "target"]).mean()
+    return u.g.mean(), u.h.mean() * 100  # harm beyond 1 Dice point, in percent
 
 
 # ---------------------------------------------------------------- results.pdf
@@ -64,25 +64,25 @@ for m, (g, h) in pts.items():
     else:
         priv = "privileged" in m
         ax[0].scatter(h, g * 100, s=11, c="white" if priv else GREY, edgecolors=GREY, linewidths=0.6, zorder=3)
-lab = [(OURS, "CARS-TTA (ours)", (0.30, 1.52)),
-       ("Minimum-entropy selection", "Min-entropy", (0.36, 1.28)),
-       ("TENT fixed 3 steps", "TENT-3, SAR-3,\nfrag. gate/router$^\\dagger$", (0.33, 0.93)),
-       ("TENT fixed 1 step", "TENT-1", (0.36, 0.55)),
-       ("Consensus ensemble always", "Consensus, entropy gate", (0.30, 0.25)),
-       ("Best fixed on source val.", "Best fixed", (0.40, -0.12)),
-       ("Histogram matching always", "Hist. match", (0.10, -0.72)),
-       ("EATA fixed 3 steps", "EATA-3", (0.42, -0.9))]
+lab = [(OURS, "CARS-TTA (ours)", (10.0, 1.62)),
+       ("Minimum-entropy selection", "Min-entropy", (12.0, 1.27)),
+       ("TENT fixed 3 steps", "TENT-3, SAR-3,\nfrag. gate/router$^\\dagger$", (12.0, 0.88)),
+       ("TENT fixed 1 step", "TENT-1", (12.0, 0.45)),
+       ("Consensus ensemble always", "Consensus, entropy gate", (8.0, 0.12)),
+       ("Best fixed on source val.", "Best on src. val.", (17.0, -0.05)),
+       ("Histogram matching always", "Hist. match", (26.0, -0.88)),
+       ("EATA fixed 3 steps", "EATA-3", (8.0, -0.75))]
 for m, t, xy in lab:
     g, h = pts[m]
     ax[0].annotate(t, (h, g * 100), xytext=xy, textcoords="data", fontsize=5.8, va="center",
                    color=C1 if m == OURS else INK, fontweight="bold" if m == OURS else "normal",
                    arrowprops=dict(arrowstyle="-", color="#c9c8c3", lw=0.4, shrinkA=0, shrinkB=2))
 ax[0].axhline(0, color=GREY, lw=0.4, ls=":")
-ax[0].set_xlabel("Harm rate (fraction of patients)")
-ax[0].set_ylabel(r"Mean Dice gain ($\times10^{-2}$)")
-ax[0].set_xlim(-0.02, 0.9)
+ax[0].set_xlabel("Patients with Dice drop > 1 point (%)")
+ax[0].set_ylabel("Mean Dice gain (points)")
+ax[0].set_xlim(-1, 40)
 ax[0].set_ylim(-0.95, 1.75)
-ax[0].set_title("(a) Gain vs. harm, confirmation folds", fontsize=7)
+ax[0].set_title("(a) Gain vs. harm > 1 point", fontsize=7)
 
 # (b) per source->target gain, confirmation folds
 units = []
@@ -99,7 +99,7 @@ for yy, u in zip(y, units):
 ax[1].set_yticks(y)
 ax[1].set_yticklabels([u[0] for u in units], fontsize=6)
 ax[1].axvline(0, color=GREY, lw=0.4, ls=":")
-ax[1].set_xlabel(r"Mean Dice gain ($\times10^{-2}$)")
+ax[1].set_xlabel("Mean Dice gain (points)")
 ax[1].legend(fontsize=5.5, loc="lower right", handletextpad=0.1, borderaxespad=0.1, labelspacing=0.2)
 ax[1].set_title("(b) Gain per vendor pair", fontsize=7)
 
@@ -175,11 +175,11 @@ for s, col in [("A", C1), ("B", C2)]:
     if not curves:
         continue
     m = pd.concat(curves).groupby(level=0).mean()
-    ax[0].plot(m.harm, m.gain * 100, color=col, lw=1.2, label=f"{VND[s]} source")
+    ax[0].plot(m.harm * 100, m.gain * 100, color=col, lw=1.2, label=f"{VND[s]} source")
     tc = m.index[np.argmin(np.abs(m.index - np.mean(chosen)))]
-    ax[0].scatter(m.loc[tc, "harm"], m.loc[tc, "gain"] * 100, s=16, c=col, edgecolors="white", zorder=4)
-ax[0].set_xlabel("Harm rate")
-ax[0].set_ylabel(r"Dice gain ($\times10^{-2}$)")
+    ax[0].scatter(m.loc[tc, "harm"] * 100, m.loc[tc, "gain"] * 100, s=16, c=col, edgecolors="white", zorder=4)
+ax[0].set_xlabel("Patients with any Dice drop (%)")
+ax[0].set_ylabel("Dice gain (points)")
 ax[0].legend(fontsize=5.5, loc="lower right")
 ax[0].set_title(r"(a) Sweep of $\tau$ (dot: source-chosen)", fontsize=7)
 
@@ -193,12 +193,12 @@ for k, (m, lab, col) in enumerate(ms):
     v = [unit.apply(lambda x: (x < -t).mean()).mean() * 100 for t in thr]
     ax[1].bar(np.arange(3) + (k - 1.5) * 0.2, v, width=0.18, color=col, label=lab)
 ax[1].set_xticks(range(3))
-ax[1].set_xticklabels(["> 0", "> 0.01", "> 0.05"])
+ax[1].set_xticklabels(["> 0", "> 1", "> 5"])
 ax[1].set_yscale("symlog", linthresh=2)
 ax[1].set_yticks([0, 1, 2, 5, 10, 20])
 ax[1].set_yticklabels(["0", "1", "2", "5", "10", "20"])
 ax[1].set_ylim(0, 90)
-ax[1].set_xlabel("Dice drop vs. source")
+ax[1].set_xlabel("Dice drop vs. source (points)")
 ax[1].set_ylabel("Patients (%)")
 ax[1].legend(fontsize=5.3, handlelength=0.8, loc="upper right", ncol=2, columnspacing=0.6, handletextpad=0.3)
 ax[1].set_title("(b) Harm at three tolerances", fontsize=7)
@@ -230,8 +230,8 @@ for lab, col, paths in [("Synthetic held-out", C4, [os.path.join(RES, t, "eval_s
 lim = ax[2].get_xlim()
 ax[2].plot(lim, lim, color=GREY, lw=0.5, ls=":")
 ax[2].axhline(0, color=GREY, lw=0.4)
-ax[2].set_xlabel(r"Predicted gain ($\times10^{-2}$, decile mean)")
-ax[2].set_ylabel(r"Realised gain ($\times10^{-2}$)")
+ax[2].set_xlabel("Predicted gain (points, decile mean)")
+ax[2].set_ylabel("Realised gain (points)")
 ax[2].legend(fontsize=5.3, loc="upper left", handlelength=1.0)
 ax[2].set_title("(c) Router gain prediction", fontsize=7)
 
@@ -241,7 +241,7 @@ for m, lab, col in [("TENT fixed 3 steps", "TENT-3", C2), ("Consensus ensemble a
     ax[3].plot(g, np.arange(1, len(g) + 1) / len(g), color=col, lw=1.1, label=lab)
 ax[3].axvline(0, color=GREY, lw=0.4, ls=":")
 ax[3].set_xlim(-6, 10)
-ax[3].set_xlabel(r"Per-patient Dice gain ($\times10^{-2}$)")
+ax[3].set_xlabel("Per-patient Dice gain (points)")
 ax[3].set_ylabel("Cumulative fraction")
 ax[3].legend(fontsize=5.5, loc="lower right")
 ax[3].set_title("(d) Distribution of gains", fontsize=7)

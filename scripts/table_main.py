@@ -36,7 +36,7 @@ hd_unit = pd.concat([hd_unit, ex.groupby(["method", "tag", "target"]).hd95.apply
 NAME = [("Source (no adaptation)", "Source model, no adaptation", "src"),
         ("TENT fixed 1 step", "TENT, 1 step \\cite{wang2021tent}", "fixed"),
         ("TENT fixed 3 steps", "TENT, 3 steps \\cite{wang2021tent}", "fixed"),
-        ("EATA fixed 3 steps", "EATA, 3 steps \\cite{niu2022eata}", "fixed"),
+        ("EATA fixed 3 steps", "EATA, 3 steps, untuned \\cite{niu2022eata}", "fixed"),
         ("SAR fixed 3 steps", "SAR, 3 steps \\cite{niu2023sar}", "fixed"),
         ("Histogram matching always", "Histogram matching", "fixed"),
         ("Consensus ensemble always", "Consensus of all candidates", "fixed"),
