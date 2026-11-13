@@ -1,0 +1,121 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcB_s0/best.pt",
+    "split": "splits/srcB_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "test",
+    "vendor": "A",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": true,
+    "src_stats": "results/srcB_s0/src_stats.npz",
+    "save_masks": 4,
+    "bs": 8,
+    "seed": 7,
+    "shard": "0/4",
+    "out": "results/srcB_s0/cand_target_A_shard0.csv"
+   },
+   "peak_gpu_mb": 1646.89892578125,
+   "total_seconds": 722.6017014980316,
+   "n_episodes": 24
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcB_s0/best.pt",
+    "split": "splits/srcB_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "test",
+    "vendor": "A",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": true,
+    "src_stats": "results/srcB_s0/src_stats.npz",
+    "save_masks": 4,
+    "bs": 8,
+    "seed": 7,
+    "shard": "1/4",
+    "out": "results/srcB_s0/cand_target_A_shard1.csv"
+   },
+   "peak_gpu_mb": 1646.89892578125,
+   "total_seconds": 728.826890707016,
+   "n_episodes": 24
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcB_s0/best.pt",
+    "split": "splits/srcB_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "test",
+    "vendor": "A",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": true,
+    "src_stats": "results/srcB_s0/src_stats.npz",
+    "save_masks": 4,
+    "bs": 8,
+    "seed": 7,
+    "shard": "2/4",
+    "out": "results/srcB_s0/cand_target_A_shard2.csv"
+   },
+   "peak_gpu_mb": 1647.39892578125,
+   "total_seconds": 748.460028886795,
+   "n_episodes": 24
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcB_s0/best.pt",
+    "split": "splits/srcB_s0.csv",
+    "cache": [
+     "data/cache/mnms",
+     "data/cache/acdc"
+    ],
+    "role": "test",
+    "vendor": "A",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "lr_hi": 0.001,
+    "lr_lo": 0.0001,
+    "method": "tent",
+    "orig_metrics": true,
+    "src_stats": "results/srcB_s0/src_stats.npz",
+    "save_masks": 4,
+    "bs": 8,
+    "seed": 7,
+    "shard": "3/4",
+    "out": "results/srcB_s0/cand_target_A_shard3.csv"
+   },
+   "peak_gpu_mb": 1647.95947265625,
+   "total_seconds": 710.3708527088165,
+   "n_episodes": 23
+  }
+ ],
+ "peak_gpu_mb": 1647.95947265625
+}

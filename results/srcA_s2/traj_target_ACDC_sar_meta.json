@@ -1,0 +1,125 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": null,
+    "dataset": "acdc",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "0/4",
+    "out": "results/srcA_s2/traj_target_ACDC_sar_shard0.csv"
+   },
+   "peak_gpu_mb": 1702.01220703125,
+   "total_seconds": 305.3908214569092,
+   "n_episodes": 38
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": null,
+    "dataset": "acdc",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "1/4",
+    "out": "results/srcA_s2/traj_target_ACDC_sar_shard1.csv"
+   },
+   "peak_gpu_mb": 1702.51220703125,
+   "total_seconds": 311.00725984573364,
+   "n_episodes": 38
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": null,
+    "dataset": "acdc",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "2/4",
+    "out": "results/srcA_s2/traj_target_ACDC_sar_shard2.csv"
+   },
+   "peak_gpu_mb": 1703.01220703125,
+   "total_seconds": 345.6881866455078,
+   "n_episodes": 37
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": null,
+    "dataset": "acdc",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "3/4",
+    "out": "results/srcA_s2/traj_target_ACDC_sar_shard3.csv"
+   },
+   "peak_gpu_mb": 1704.01220703125,
+   "total_seconds": 312.3305115699768,
+   "n_episodes": 37
+  }
+ ],
+ "peak_gpu_mb": 1704.01220703125
+}

@@ -1,0 +1,118 @@
+{
+ "selected": {
+  "lambda_h": 0.0,
+  "tau": 0.03,
+  "val_gain_per_lambda": {
+   "0.0": -0.9799506717069544,
+   "1.0": -0.981001733858361,
+   "2.0": -0.9815844243470757
+  },
+  "cands": [
+   "hi1",
+   "hi2",
+   "hi3",
+   "lo1",
+   "lo2",
+   "lo3",
+   "g07",
+   "g14",
+   "hm",
+   "dn",
+   "ens"
+  ],
+  "n_shared_features": 17,
+  "n_cand_features": 24,
+  "router_params": 7617,
+  "n_train_episodes": 615,
+  "n_val_episodes": 168,
+  "drop": [],
+  "train_filter": null,
+  "harm_cap": 0.1
+ },
+ "targets": {
+  "synthval": {
+   "n": 168,
+   "methods": {
+    "CARS-TTA (ours)": {
+     "dice": 0.801728662725713,
+     "dice_ci": [
+      0.7865903161987482,
+      0.8140300463326524
+     ],
+     "dice_sd": 0.09409558574995615,
+     "hd95": null,
+     "gain": 0.020049328293045676,
+     "gain_ci": [
+      0.011428581616139515,
+      0.030698848747180756
+     ],
+     "harm_rate": 0.10119047619047619,
+     "harm_ci": [
+      0.05952380952380952,
+      0.14285714285714285
+     ],
+     "help_rate": 0.38095238095238093,
+     "cat_harm_002": 0.005952380952380952,
+     "cat_harm_005": 0.0,
+     "cat_harm_010": 0.0,
+     "adapt_rate": 0.48214285714285715,
+     "choice_hist": {
+      "src": 87,
+      "hi1": 3,
+      "hi2": 6,
+      "hi3": 9,
+      "g07": 15,
+      "g14": 1,
+      "hm": 10,
+      "dn": 37
+     }
+    },
+    "[privileged] Oracle, all candidates": {
+     "dice": 0.8093885242532127,
+     "dice_ci": [
+      0.7960543109428194,
+      0.8223868558734698
+     ],
+     "dice_sd": 0.0898931044118508,
+     "hd95": null,
+     "gain": 0.027709189820545526,
+     "gain_ci": [
+      0.019473306396762792,
+      0.037170690855761114
+     ],
+     "harm_rate": 0.0,
+     "harm_ci": [
+      0.0,
+      0.0
+     ],
+     "help_rate": 0.9345238095238095,
+     "cat_harm_002": 0.0,
+     "cat_harm_005": 0.0,
+     "cat_harm_010": 0.0,
+     "adapt_rate": 0.9345238095238095,
+     "choice_hist": {
+      "src": 11,
+      "hi1": 9,
+      "hi2": 14,
+      "hi3": 19,
+      "lo1": 2,
+      "lo3": 4,
+      "g07": 22,
+      "g14": 12,
+      "hm": 19,
+      "dn": 43,
+      "ens": 13
+     }
+    }
+   },
+   "routing": {
+    "spearman_gain_pooled": 0.5142514395471255,
+    "spearman_gain_within_patient": 0.4318722943722944,
+    "auroc_beneficial": 0.7127967573827446,
+    "brier_beneficial": 0.059352739445848055,
+    "ece_beneficial": 0.017497749789881244,
+    "base_rate_beneficial": 0.9345238095238095
+   }
+  }
+ }
+}

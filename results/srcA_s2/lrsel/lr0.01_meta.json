@@ -1,0 +1,125 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "0/4",
+    "out": "results/srcA_s2/lrsel/lr0.01_shard0.csv"
+   },
+   "peak_gpu_mb": 1623.69482421875,
+   "total_seconds": 55.58340930938721,
+   "n_episodes": 22
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "1/4",
+    "out": "results/srcA_s2/lrsel/lr0.01_shard1.csv"
+   },
+   "peak_gpu_mb": 1624.25537109375,
+   "total_seconds": 54.63233423233032,
+   "n_episodes": 22
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "2/4",
+    "out": "results/srcA_s2/lrsel/lr0.01_shard2.csv"
+   },
+   "peak_gpu_mb": 1701.51220703125,
+   "total_seconds": 67.96735429763794,
+   "n_episodes": 22
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s2/best.pt",
+    "split": "splits/srcA_s2.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "router_val",
+    "vendor": null,
+    "dataset": null,
+    "n_shifts": 10,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 5,
+    "lr": 0.01,
+    "method": "tent",
+    "orig_metrics": false,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 101,
+    "bs": 8,
+    "no_features": true,
+    "shard": "3/4",
+    "out": "results/srcA_s2/lrsel/lr0.01_shard3.csv"
+   },
+   "peak_gpu_mb": 1625.20458984375,
+   "total_seconds": 63.14902186393738,
+   "n_episodes": 22
+  }
+ ],
+ "peak_gpu_mb": 1701.51220703125
+}

@@ -1,0 +1,29 @@
+{
+ "args": {
+  "ckpt": "checkpoints/srcB_s0/best.pt",
+  "split": "splits/srcB_s0.csv",
+  "cache": [
+   "data/cache/mnms",
+   "data/cache/acdc"
+  ],
+  "role": "test",
+  "vendor": null,
+  "dataset": "acdc",
+  "n_shifts": 0,
+  "pool": "all",
+  "sev_max": 1.0,
+  "lr_hi": 0.001,
+  "lr_lo": 0.0001,
+  "method": "tent",
+  "orig_metrics": true,
+  "src_stats": "results/srcB_s0/src_stats.npz",
+  "save_masks": 4,
+  "bs": 8,
+  "seed": 7,
+  "shard": "0/4",
+  "out": "results/srcB_s0/cand_target_ACDC_shard0.csv"
+ },
+ "peak_gpu_mb": 1648.40869140625,
+ "total_seconds": 1121.6868469715118,
+ "n_episodes": 38
+}

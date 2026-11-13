@@ -1,0 +1,13 @@
+method,diff,unit_ci,p_unit,pair_diff,pairs_better,p_pair,cluster_ci,p_unit_holm,p_pair_holm
+TENT fixed 3 steps,0.5603533085175012,"(np.float64(-0.03), np.float64(1.22))",0.2978515625,0.5603533085175014,4/8,0.3828125,"(np.float64(0.34), np.float64(0.83))",1.0,1.0
+SAR fixed 3 steps,0.564897959115991,"(np.float64(-0.02), np.float64(1.22))",0.252227783203125,0.564897959115991,4/8,0.3125,"(np.float64(0.32), np.float64(0.85))",1.0,1.0
+Minimum-entropy selection,0.3485226083086598,"(np.float64(-0.16), np.float64(0.98))",0.743560791015625,0.3485226083086597,4/8,0.84375,"(np.float64(0.16), np.float64(0.56))",1.0,1.0
+Fragmentation gate (src-cal.),0.5513986025474111,"(np.float64(-0.04), np.float64(1.23))",0.348388671875,0.5513986025474112,4/8,0.3125,"(np.float64(0.32), np.float64(0.83))",1.0,1.0
+Consensus ensemble always,1.0783990783638624,"(np.float64(0.65), np.float64(1.55))",3.0517578125e-05,1.0783990783638624,8/8,0.0078125,"(np.float64(0.85), np.float64(1.33))",0.0003662109375,0.09375
+Agreement selection (AETTA-style),1.1725866449620432,"(np.float64(0.73), np.float64(1.66))",3.0517578125e-05,1.1725866449620432,8/8,0.0078125,"(np.float64(0.96), np.float64(1.44))",0.0003662109375,0.09375
+Max-confidence selection,0.4194560265400644,"(np.float64(-0.07), np.float64(1.02))",0.40374755859375,0.4194560265400644,4/8,0.546875,"(np.float64(0.21), np.float64(0.63))",1.0,1.0
+Cohort min-entropy (one per site),0.5603533085175012,"(np.float64(-0.03), np.float64(1.25))",0.2978515625,0.5603533085175014,4/8,0.3828125,"(np.float64(0.32), np.float64(0.83))",1.0,1.0
+Cohort agreement (one per site),1.3091859887055675,"(np.float64(0.87), np.float64(1.82))",3.0517578125e-05,1.3091859887055675,8/8,0.0078125,"(np.float64(1.1), np.float64(1.58))",0.0003662109375,0.09375
+CARS-TTA cohort (one per site),0.29079593273090937,"(np.float64(-0.16), np.float64(0.84))",0.632171630859375,0.2907959327309094,3/8,0.7421875,"(np.float64(0.06), np.float64(0.51))",1.0,1.0
+"[privileged] Frag. tertile router, target-cal.",0.5419264643058382,"(np.float64(-0.05), np.float64(1.2))",0.2978515625,0.5419264643058385,4/8,0.4609375,"(np.float64(0.31), np.float64(0.83))",1.0,1.0
+[privileged] Best fixed per site,0.05131564339565256,"(np.float64(-0.24), np.float64(0.39))",0.860260009765625,0.051315643395652595,3/8,0.84375,"(np.float64(-0.12), np.float64(0.26))",1.0,1.0

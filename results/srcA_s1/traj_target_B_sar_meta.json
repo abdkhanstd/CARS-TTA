@@ -1,0 +1,125 @@
+{
+ "shards": [
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s1/best.pt",
+    "split": "splits/srcA_s1.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "0/4",
+    "out": "results/srcA_s1/traj_target_B_sar_shard0.csv"
+   },
+   "peak_gpu_mb": 1624.70458984375,
+   "total_seconds": 415.4994969367981,
+   "n_episodes": 32
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s1/best.pt",
+    "split": "splits/srcA_s1.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "1/4",
+    "out": "results/srcA_s1/traj_target_B_sar_shard1.csv"
+   },
+   "peak_gpu_mb": 1624.306640625,
+   "total_seconds": 395.25118923187256,
+   "n_episodes": 31
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s1/best.pt",
+    "split": "splits/srcA_s1.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "2/4",
+    "out": "results/srcA_s1/traj_target_B_sar_shard2.csv"
+   },
+   "peak_gpu_mb": 1703.51220703125,
+   "total_seconds": 448.1873080730438,
+   "n_episodes": 31
+  },
+  {
+   "args": {
+    "ckpt": "checkpoints/srcA_s1/best.pt",
+    "split": "splits/srcA_s1.csv",
+    "cache": [
+     "data/cache/acdc",
+     "data/cache/mnms"
+    ],
+    "role": "test",
+    "vendor": "B",
+    "dataset": "mnms",
+    "n_shifts": 0,
+    "pool": "all",
+    "sev_max": 1.0,
+    "K": 3,
+    "lr": 0.01,
+    "method": "sar",
+    "orig_metrics": true,
+    "src_stats": null,
+    "save_masks": 0,
+    "seed": 7,
+    "bs": 8,
+    "no_features": true,
+    "shard": "3/4",
+    "out": "results/srcA_s1/traj_target_B_sar_shard3.csv"
+   },
+   "peak_gpu_mb": 1625.20458984375,
+   "total_seconds": 409.57834815979004,
+   "n_episodes": 31
+  }
+ ],
+ "peak_gpu_mb": 1703.51220703125
+}

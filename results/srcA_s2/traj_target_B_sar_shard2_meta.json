@@ -1,0 +1,30 @@
+{
+ "args": {
+  "ckpt": "checkpoints/srcA_s2/best.pt",
+  "split": "splits/srcA_s2.csv",
+  "cache": [
+   "data/cache/acdc",
+   "data/cache/mnms"
+  ],
+  "role": "test",
+  "vendor": "B",
+  "dataset": "mnms",
+  "n_shifts": 0,
+  "pool": "all",
+  "sev_max": 1.0,
+  "K": 3,
+  "lr": 0.01,
+  "method": "sar",
+  "orig_metrics": true,
+  "src_stats": null,
+  "save_masks": 0,
+  "seed": 7,
+  "bs": 8,
+  "no_features": true,
+  "shard": "2/4",
+  "out": "results/srcA_s2/traj_target_B_sar_shard2.csv"
+ },
+ "peak_gpu_mb": 1703.51220703125,
+ "total_seconds": 496.08698749542236,
+ "n_episodes": 31
+}

@@ -1,0 +1,30 @@
+{
+ "args": {
+  "ckpt": "checkpoints/srcB_s0/best.pt",
+  "split": "splits/srcB_s0.csv",
+  "cache": [
+   "data/cache/acdc",
+   "data/cache/mnms"
+  ],
+  "role": "test",
+  "vendor": "C",
+  "dataset": "mnms",
+  "n_shifts": 0,
+  "pool": "all",
+  "sev_max": 1.0,
+  "K": 3,
+  "lr": 0.001,
+  "method": "eata",
+  "orig_metrics": true,
+  "src_stats": null,
+  "save_masks": 0,
+  "seed": 7,
+  "bs": 8,
+  "no_features": true,
+  "shard": "3/4",
+  "out": "results/srcB_s0/traj_target_C_eata_shard3.csv"
+ },
+ "peak_gpu_mb": 1625.70458984375,
+ "total_seconds": 247.29503726959229,
+ "n_episodes": 12
+}

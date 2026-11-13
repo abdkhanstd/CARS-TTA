@@ -1,0 +1,16 @@
+# data and large or machine-specific files
+data/
+data_transfer/
+checkpoints_*/
+splits_*/
+docs/
+logs/
+venv/
+__pycache__/
+*.pyc
+*.part
+results/**/*_masks.npz
+results/**/*.log
+sync.sh
+tools/mega_public_download.py
+*.tex

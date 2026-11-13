@@ -1,0 +1,10 @@
+dataset  vendor   role        
+acdc     Siemens  test            150
+mnms     A        test             95
+         B        router_train     20
+                  router_val       10
+                  seg_train        75
+                  seg_val          20
+         C        test             50
+         D        test             50
+dtype: int64
