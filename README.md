@@ -1,6 +1,6 @@
 # CARS-TTA: Counterfactual Adaptation Routing for Selective Test-Time Adaptation
 
-Code, trained weights and per-patient results for *Learning When to Adapt Without Target Labels: Counterfactual Routing for Selective Test-Time Adaptation in Cross-Vendor Cardiac MRI Segmentation*.
+Code, trained weights and per-patient results for *Counterfactual Routing for Selective Test-Time Adaptation in Cardiac MRI*.
 
 CARS-TTA decides, per patient and without target labels, whether to adapt a cardiac MRI segmenter at test time and which adaptation to use. A small router is trained only on labelled **source** patients that the segmenter never saw, after passing them through simulated acquisition shifts and recording the realised Dice change of every candidate adaptation. At deployment it predicts each candidate's gain from label-free features and keeps the source prediction unless a candidate is predicted to help.
 
